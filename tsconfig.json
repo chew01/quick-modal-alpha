@@ -1,0 +1,10 @@
+{
+  "exclude": [
+    "dist",
+    "test"
+  ],
+  "extends": "@tsconfig/node16-strictest/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  }
+}
