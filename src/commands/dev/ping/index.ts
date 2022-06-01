@@ -8,7 +8,7 @@ const pingCommand: SlashCommand = {
     .setDescription('Replies with Pong!'),
   async execute(interaction: CommandInteraction) {
     const lat = Date.now() - interaction.createdTimestamp;
-    await interaction.reply(`Pong! ${lat} ms`);
+    return interaction.reply(`Pong! ${lat} ms`);
   },
 };
 

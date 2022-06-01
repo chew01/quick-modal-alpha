@@ -5,7 +5,7 @@ import type { BotEventHandler } from '../types/event';
 import log from '../utils/logger';
 
 export const eventArray: BotEventHandler[] = [];
-const eventPaths = fs.readdirSync(path.resolve(__dirname, 'eventHandlers/')).filter((filename) => filename.endsWith('.js'));
+const eventPaths = fs.readdirSync(path.resolve(__dirname, 'eventHandlers/')).filter((filename) => filename.endsWith('.ts'));
 eventPaths.forEach((eventHandler) => {
   import(`./eventHandlers/${eventHandler}`).then((event) => eventArray.push(event.default));
 });

@@ -1,7 +1,5 @@
 import { Client } from 'discord.js';
-import {
-  DISCORD_TOKEN, DEVELOPMENT_MODE, GATEWAY_INTENTS,
-} from './config';
+import { DEVELOPMENT_MODE, DISCORD_TOKEN, GATEWAY_INTENTS } from './config';
 import { updateDevCommands, updateGlobalCommands } from './utils/commandUpdater';
 import log from './utils/logger';
 import setUpEventHandlers, { eventArray } from './events';

@@ -7,10 +7,10 @@ import log from '../utils/logger';
 export const commands = new Collection<string, SlashCommand>();
 export const devDirsArray = fs.readdirSync(path.resolve(__dirname, 'dev/'), { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
-  .map((dirent) => path.resolve(__dirname, `dev/${dirent.name}/index.js`));
+  .map((dirent) => path.resolve(__dirname, `dev/${dirent.name}/index.ts`));
 export const globalDirsArray = fs.readdirSync(path.resolve(__dirname, 'global/'), { withFileTypes: true })
   .filter((dirent) => dirent.isDirectory())
-  .map((dirent) => path.resolve(__dirname, `global/${dirent.name}/index.js`));
+  .map((dirent) => path.resolve(__dirname, `global/${dirent.name}/index.ts`));
 
 export async function setUpCommandCollections(devDirs: string[], globalDirs: string[]) {
   log.info('[INITIALIZING] Setting up commands...');
